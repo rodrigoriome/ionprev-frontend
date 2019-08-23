@@ -1,6 +1,6 @@
 module.exports = {
-  publicPath: process.env.VUE_APP_WEB_HOST,
+  publicPath: process.env.NODE_ENV === "production" ? process.env.VUE_APP_WEB_HOST : "./",
   devServer: {
-    port: process.env.VUE_APP_WEB_PORT
+    port: process.env.PORT || 8080
   }
 };
